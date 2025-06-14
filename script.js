@@ -40,6 +40,15 @@ function generateRecipe(event) {
       </div>`);
   let apiKey = "aef1757e37906f8atc32b9da5odbc24a";
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+  new Typewriter("#recipe", {
+    strings: "...",
+    autoStart: true,
+    cursor: "",
+    loop: true,
+    delay: 150,
+    deleteSpeed: 1,
+    pauseFor: 150,
+  });
   axios.get(apiURL).then(getRecipe);
 }
 

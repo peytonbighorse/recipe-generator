@@ -1,4 +1,12 @@
+html,
 body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   color: #222;
   background-color: #a0dd5b;
   font-family: "Courier New", Courier, monospace;
@@ -49,6 +57,12 @@ a:hover {
   color: #ff3eb5;
 }
 
+footer {
+  padding: 1em;
+  text-align: center;
+  font-size: 15px;
+}
+
 .submit-button {
   background-color: #366600;
   color: #f2fce4;
@@ -63,6 +77,7 @@ a:hover {
   border-color: #366600;
 }
 #recipe {
+  flex: 1;
   display: block;
   margin: 0 auto;
   width: 60%;
