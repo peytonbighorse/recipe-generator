@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Easy Recipe Generator</title>
@@ -11,8 +12,12 @@
     <h1>Easy Recipes for Busy Bees</h1>
     <form id="recipe-generator">
       <h2>Enter your preferences</h2>
-      <input type="text" placeholder="Main ingredients" />
-      <input type="text" placeholder="Dietary restrictions" />
+      <input type="text" placeholder="Main ingredients" id="main-ingredient" />
+      <input
+        type="text"
+        placeholder="Dietary restrictions"
+        id="dietary-restrictions"
+      />
       <input type="submit" class="submit-button" />
     </form>
     <div id="recipe"></div>

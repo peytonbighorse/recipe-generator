@@ -1,10 +1,23 @@
 const recipeFormElement = document.querySelector("#recipe-generator");
-
+function getRecipe(response) {
+  new Typewriter("#recipe", {
+    strings: response.data.answer,
+    autoStart: true,
+    delay: 1,
+    cursor: "",
+  });
+}
 function generateRecipe(event) {
   event.preventDefault();
-  new Typewriter("#recipe", {
-    strings: `<h2>RECIPE TITLE</h2>
-      <h4 class="cook-time">30 minutes</h4>
+  let dietaryRestrictions = document.querySelector(
+    "#dietary-restrictions"
+  ).value;
+  let mainIngredient = document.querySelector("#main-ingredient").value;
+  let prompt = `Please provide an easy-to-make ${dietaryRestrictions} recipe using ${mainIngredient}`;
+  let context =
+    encodeURIComponent(`You are an AI Assistant knowlegable about all types of recipes. Please provide a recipe that takes 60 minutes or less to prep and cook based on the user's requests. Provide recipe that requires only basic kitchen equipment. The Recipe should be in this format: <h2>RECIPE TITLE</h2>
+      <h4 class="cook-time">Prep and Cook Time: xx minutes</h4>
+      <h4>Serves: x people</h4>
       <h3>Ingredients</h3>
       <div class="list-container">
         <ul class="ingredients">
@@ -12,6 +25,7 @@ function generateRecipe(event) {
           <li>Ingredient</li>
           <li>Ingredient</li>
           <li>Ingredient</li>
+          <li>Etc, as many ingredients as neccesary</li>
         </ul>
       </div>
       <h3>Method</h3>
@@ -21,12 +35,12 @@ function generateRecipe(event) {
           <li>Step 2</li>
           <li>Step 3</li>
           <li>Step 4</li>
+          <li>Etc, as many steps as neccesary</li>
         </ol>
-      </div>`,
-    autoStart: true,
-    delay: 1,
-    curor: "",
-  });
+      </div>`);
+  let apiKey = "aef1757e37906f8atc32b9da5odbc24a";
+  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+  axios.get(apiURL).then(getRecipe);
 }
 
 recipeFormElement.addEventListener("submit", generateRecipe);
