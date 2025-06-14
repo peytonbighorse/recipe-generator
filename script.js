@@ -9,11 +9,9 @@ function getRecipe(response) {
 }
 function generateRecipe(event) {
   event.preventDefault();
-  let dietaryRestrictions = document.querySelector(
-    "#dietary-restrictions"
-  ).value;
+  let otherInstructions = document.querySelector("#other-instructions").value;
   let mainIngredient = document.querySelector("#main-ingredient").value;
-  let prompt = `Please provide an easy-to-make ${dietaryRestrictions} recipe using ${mainIngredient}`;
+  let prompt = `Please provide an easy-to-make ${otherInstructions} recipe using ${mainIngredient}`;
   let context =
     encodeURIComponent(`You are an AI Assistant knowlegable about all types of recipes. Please provide a recipe that takes 60 minutes or less to prep and cook based on the user's requests. Provide recipe that requires only basic kitchen equipment. The Recipe should be in this format: <h2>RECIPE TITLE</h2>
       <h4 class="cook-time">Prep and Cook Time: xx minutes</h4>
@@ -46,8 +44,8 @@ function generateRecipe(event) {
     cursor: "",
     loop: true,
     delay: 150,
-    deleteSpeed: 1,
-    pauseFor: 150,
+    deleteSpeed: 3,
+    pauseFor: 100,
   });
   axios.get(apiURL).then(getRecipe);
 }

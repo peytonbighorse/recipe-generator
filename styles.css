@@ -16,7 +16,7 @@ form {
   background-color: #f2fce4a9;
   border-radius: 10px;
   padding: 5px 20px 10px 20px;
-  max-width: 35%;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
 }
@@ -63,6 +63,10 @@ footer {
   font-size: 15px;
 }
 
+.text-input {
+  font-size: 14px;
+  width: 300px;
+}
 .submit-button {
   background-color: #366600;
   color: #f2fce4;
