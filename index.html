@@ -3,39 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Easy Recipe Generator</title>
   </head>
   <body>
     <h1>Easy Recipes for Busy Bees</h1>
-    <form>
+    <form id="recipe-generator">
       <h2>Enter your preferences</h2>
       <input type="text" placeholder="Main ingredients" />
       <input type="text" placeholder="Dietary restrictions" />
       <input type="submit" class="submit-button" />
     </form>
-    <div class="recipe">
-      <h2>RECIPE TITLE</h2>
-      <h4 class="cook-time">30 minutes</h4>
-      <h3>Ingredients</h3>
-      <div class="list-container">
-        <ul class="ingredients">
-          <li>Ingredient</li>
-          <li>Ingredient</li>
-          <li>Ingredient</li>
-          <li>Ingredient</li>
-        </ul>
-      </div>
-      <h3>Method</h3>
-      <div class="list-container">
-        <ol class="recipe-method">
-          <li>Step 1</li>
-          <li>Step 2</li>
-          <li>Step 3</li>
-          <li>Step 4</li>
-        </ol>
-      </div>
-    </div>
+    <div id="recipe"></div>
     <footer>
       This AI project was coded by
       <a href="https://github.com/peytonbighorse" target="_blank"

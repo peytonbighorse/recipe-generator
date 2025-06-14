@@ -62,7 +62,7 @@ a:hover {
   background-color: #f2fce4;
   border-color: #366600;
 }
-.recipe {
+#recipe {
   display: block;
   margin: 0 auto;
   width: 60%;
