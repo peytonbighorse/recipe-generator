@@ -4,7 +4,7 @@ This is a fun and simple recipe generator built with HTML, CSS, and JavaScript. 
 
 Live version: [60minuterecipes.netlify.app](https://60minuterecipes.netlify.app)
 
-## 🍳 Features
+## Features
 
 - Generates custom recipes based on user input
 - AI-generated results using:
@@ -17,7 +17,7 @@ Live version: [60minuterecipes.netlify.app](https://60minuterecipes.netlify.app)
 - Animated typewriter effect when recipe is loading and displayed
 - Mobile-responsive and clean UI
 
-## 🛠 Built With
+## Built With
 
 - **HTML5** for page structure  
 - **CSS3** for styling, layout, and responsive design  
@@ -27,13 +27,13 @@ Live version: [60minuterecipes.netlify.app](https://60minuterecipes.netlify.app)
 - **Typewriter Effect** library for animated text  
 - **Netlify** for hosting and deployment  
 
-## 📁 Project Structure
+## Project Structure
 
 - `index.html` — Contains the main HTML structure and input form  
 - `styles.css` — Custom styles, color palette, fonts, and layout  
 - `script.js` — JavaScript logic for user input, API interaction, and dynamic rendering  
 
-## 📚 What I Learned
+## What I Learned
 
 - How to work with external AI APIs  
 - Creating dynamic HTML using JavaScript and user input  
@@ -42,6 +42,8 @@ Live version: [60minuterecipes.netlify.app](https://60minuterecipes.netlify.app)
 - Designing and styling responsive forms and containers  
 - Structuring output using semantic HTML for better readability and accessibility
 
-## 🙋 About Me
+## About Me
 
-I'm a designer, coder, and performer based in Los Angeles. I’m currently building interactive fan-focused tools and learning more about product and mobile design.
+I'm a designer, coder, and performer. I’m currently building interactive fan-focused tools and learning more about product and mobile design.
+[Website → peytonbighorse.com](https://www.peytonbighorse.com)
+
